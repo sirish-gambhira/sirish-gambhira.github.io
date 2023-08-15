@@ -38,7 +38,7 @@
                 I am a Research Fellow at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research India</a>, working with <a href="https://www.microsoft.com/en-us/research/people/padmanab/">Dr. Venkat Padmanabhan</a> and <a href="https://www.microsoft.com/en-us/research/people/akshayn/">Dr. Akshay Nambi</a> on the project <a href="https://www.microsoft.com/en-us/research/project/hyway/">HyWay.</a> I am broadly interested in the intersection of <b>Systems</b> and <b>Applied Machine Learning</b>.
               </p>
               <p>
-                Prior to MSR, I worked as an intern with <a href="https://www.microsoft.com/en-us/research/people/vipinv/">Vipindeep Vangala</a> on modelling and analyzing user behavior as time-series data, for which I received a Pre Placement Offer (PPO). 
+                Prior to MSR, I worked as an intern at Microsoft IDC with <a href="https://www.microsoft.com/en-us/research/people/vipinv/">Vipindeep Vangala</a> on modelling and analyzing user behavior as time-series data, for which I received a Pre Placement Offer (PPO). 
               </p>
               <p>
                 I graduated from <a href="https://www.iitkgp.ac.in/">Indian Institute of Technology, Kharagpur</a> with a Dual Degree in Electronics and Electrical Communication Engineering and a minor in Computer Science and Engineering. I worked on <b>Multi-view 3D Object Reconstruction</b> for my master's thesis with <a href="https://sites.google.com/site/dseniitkharagpur/">Prof. Debashis Sen.</a>
@@ -66,21 +66,20 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat == 'research' %}
+          {% if cat == 'publication' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
               <br>
               {{post.authors}}
-
               <br>
               <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
               <br>
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
+              {% if post.paper %}
+              <a href="{{post.paper}}">paper</a> /
               {% endif %}
               {% if post.video %}
               <a href="{{post.video}}">video</a> /
@@ -114,28 +113,22 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Intel Projects</h2>
-              <p>Besides my work on the RealSense depth sensors and the publications above, a sampling of my publicly disclosed work
-              </p>
+              <h2>Work Experience</h2>
             </td>
           </tr>
         </table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat == 'Intel' %}
+          {% if cat == 'work-exp' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
-              <br>
-              <em>{{post.categories}} {{post.course}}</em>
-              <br>
-              {{ post.date | date: "%Y-%m-%d" }}
-
+              <em><b>{{post.advisor}}</b></em> {{post.company}}
+              <em> [{{ post.start }} - {{ post.end }}] </em>
               <br>
               {% if post.website %}
               <a href="{{post.website}}">website</a> /
@@ -191,7 +184,7 @@
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat != 'research' and cat != 'Intel' %}
+          {% if cat == 'research-exp' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
@@ -248,7 +241,7 @@
             <td style="padding:0px">
               <br>
               <p style="text-align:center;font-size:small;">
-                Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
+                Layout inspired from <a style="font-size:small;" href="https://github.com/leonidk/leonidk.github.io">here</a>
               </p>
             </td>
           </tr>
