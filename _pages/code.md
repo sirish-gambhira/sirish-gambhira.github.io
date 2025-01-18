@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: ""
-permalink: /Code/
+permalink: /code/
 author_profile: true
 redirect_from:
   - 
