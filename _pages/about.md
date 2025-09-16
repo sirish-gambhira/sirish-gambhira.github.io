@@ -15,7 +15,7 @@ Prior to Georgia Tech, I worked as a Research Engineer (2022-2024) at Microsoft 
 <div style="height:500px;width:775px;border:none;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
 <font size="2"> 
 <ul>
-<li><strong>May, 2025</strong>: AI Frameworks intern at AMD, San Jose in their Quantization team. Accelerated the GPTQ quantization and model evaluation pipelines using multi-gpu approaches and obtained nearly 10x speedups.
+<li><strong>May, 2025</strong>: AI Frameworks intern at AMD Quantization team.
 <li><strong>Jan, 2025</strong>: Graduate Teaching Assistant (GTA) for CS 6476: Computer Vision with Prof. Hays
 <li><strong>Dec, 2024</strong>: Received 4.0 GPA in Fall 2024
 <li><strong>Aug, 2024</strong>: Coursework: Artificial Intelligence, Computer Vision, Systems for ML and GPU Hardware & Software
