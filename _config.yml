@@ -21,7 +21,7 @@ repository               : "sirish-gambhira/sirish-gambhira.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "profile.png"
   name             : "Sirish Gambhira"
   pronouns         : # "He / Him" 
   bio              : "MS CS @ Georgia Tech (SAIL Lab) | Microsoft Research"
