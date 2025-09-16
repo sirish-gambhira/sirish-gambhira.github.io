@@ -17,7 +17,12 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "sirish-gambhira/sirish-gambhira.github.io"
 
 # Theme Settings
-remote_theme: "academicpages/academicpages.github.io"
+repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_trophies:
+  enabled: true
+  theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
+  theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
