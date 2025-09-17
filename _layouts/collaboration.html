@@ -1,0 +1,270 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="page__inner-wrap">
+      <header>
+        {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+      </header>
+
+      <section class="collaboration__content">
+        <!-- Compact Overview -->
+        <div class="collaboration__meta">
+          <div class="meta__grid">
+            {% if page.venue or page.location %}
+              <div class="meta__item">
+                <span class="meta__label">Place</span>
+                <span class="meta__value">
+                  {% if page.venue %}{{ page.venue }}{% endif %}
+                  {% if page.venue and page.location %}, {% endif %}
+                  {% if page.location %}{{ page.location }}{% endif %}
+                </span>
+              </div>
+            {% endif %}
+
+            {% if page.keywords %}
+              <div class="meta__item">
+                <span class="meta__label">Keywords</span>
+                <span class="meta__value">{{ page.keywords }}</span>
+              </div>
+            {% endif %}
+
+            {% if page.excerpt %}
+              <div class="meta__item">
+                <span class="meta__label">Role</span>
+                <span class="meta__value">{{ page.excerpt }}</span>
+              </div>
+            {% endif %}
+
+            {% if page.gpa %}
+              <div class="meta__item">
+                <span class="meta__label">GPA</span>
+                <span class="meta__value">{{ page.gpa }}</span>
+              </div>
+            {% endif %}
+
+            {% if page.date %}
+              <div class="meta__item">
+                <span class="meta__label">Timeline</span>
+                <span class="meta__value">
+                  {{ page.date | date: "%b %Y" }}{% if page.end_date %} - {{ page.end_date | date: "%b %Y" }}{% else %} - Present{% endif %}
+                </span>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="collaboration__body">
+          {{ content }}
+        </div>
+      </section>
+
+      <footer class="collaboration__footer">
+        <a href="/#collaborations" class="btn btn--primary">
+          ← Back to Collaborations
+        </a>
+      </footer>
+    </div>
+  </article>
+</div>
+
+<style>
+.collaboration__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.collaboration__meta {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.2em;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.meta__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.8em;
+}
+
+.meta__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.meta__label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 60px;
+  flex-shrink: 0;
+}
+
+.meta__value {
+  color: #212529;
+  font-weight: 500;
+  flex: 1;
+  font-size: 0.9em;
+}
+
+.collaboration__body {
+  line-height: 1.7;
+}
+
+/* Section Card Styling - Each h3 section becomes a card */
+.collaboration__body h3 {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 0.25px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  margin: 2em 0 0.5em 0;
+  font-size: 1em;
+  color: #495057;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.collaboration__body h3:first-child {
+  margin-top: 0;
+}
+
+/* Content immediately following h3 gets card body styling */
+.collaboration__body h3 + p,
+.collaboration__body h3 + ul,
+.collaboration__body h3 + div,
+.collaboration__body h3 + blockquote {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 1.2em;
+  margin: 0 0 1.5em 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Handle multiple consecutive elements after h3 */
+.collaboration__body h3 ~ *:not(h3):not(h2) {
+  background: #ffffff;
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  padding: 0 1.2em;
+  margin: 0;
+}
+
+/* First element after h3 gets top styling */
+.collaboration__body h3 + * {
+  border-top: 1px solid #dee2e6;
+  padding-top: 1.2em;
+}
+
+/* Last element before next h3 or end gets bottom styling */
+.collaboration__body h3 ~ *:has(+ h3),
+.collaboration__body h3 ~ *:last-child {
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 0 0 8px 8px;
+  padding-bottom: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.collaboration__body h2 {
+  font-size: 1.4em;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 0.3em;
+  color: #343a40;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+}
+
+.collaboration__body ul {
+  margin: 0.8em 0;
+  padding-left: 1.2em;
+}
+
+.collaboration__body li {
+  margin: 0.3em 0;
+}
+
+.collaboration__footer {
+  margin-top: 3em;
+  text-align: center;
+  padding-top: 2em;
+  border-top: 2px solid #eee;
+}
+
+.btn--primary {
+  background-color: #007acc;
+  color: white;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn--primary:hover {
+  background-color: #005fa3;
+  color: white;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .collaboration__meta {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    border-color: #4a5568;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .meta__label {
+    color: #a0aec0;
+  }
+  
+  .meta__value {
+    color: #e2e8f0;
+  }
+  
+  .collaboration__body h3 {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    border-color: #4a5568;
+    color: #cbd5e0;
+  }
+  
+  .collaboration__body h3 + p,
+  .collaboration__body h3 + ul,
+  .collaboration__body h3 + div,
+  .collaboration__body h3 + blockquote,
+  .collaboration__body h3 ~ *:not(h3):not(h2) {
+    background: #1a202c;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  .collaboration__body h2 {
+    color: #e2e8f0;
+    border-bottom-color: #4a5568;
+  }
+  
+  .collaboration__footer {
+    border-top-color: #4a5568;
+  }
+  
+  .btn--primary {
+    background-color: #63b3ed;
+  }
+  
+  .btn--primary:hover {
+    background-color: #4299e1;
+  }
+}
+</style>

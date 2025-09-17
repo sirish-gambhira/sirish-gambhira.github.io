@@ -7,21 +7,37 @@ redirect_from:
   - /about.html
 ---
 
-I am a graduate student in Computer Science at Georgia Tech and a researcher at [SAIL Lab](https://gatech-sysml.github.io/). I am interested in MLSys and have been working on GPU programming, KV cache optimizations for disaggregated LLM inference, serving systems for quantized models. I interned at AMD quantization in Summer'25 where I developed multi-gpu solutions to speedup expert-quantization for MoE models using GPTQ and model evaluation pipelines.
+I am a graduate student in Computer Science at Georgia Tech and a researcher at [SAIL Lab](https://gatech-sysml.github.io/). I am interested in MLSys and have been working on GPU programming, KV cache optimizations for disaggregated LLM inference, serving systems for quantized models. I am looking for full-time opportunities starting Spring 2026.
 
-Prior to Georgia Tech, I worked as a Research Engineer (2022-2024) at Microsoft Research India with [Dr. Venkat Padmanabhan](https://www.microsoft.com/en-us/research/people/padmanab/) and contributed to [HyWay](https://www.microsoft.com/en-us/research/project/hyway/). I co-led HyWay from a research concept into internal product and built enhanced user interfaces. I built cool end-to-end systems such as indoor user localization and continual learning for user-state modeling. I completed my bachelors and masters (integrated) in Electronics from Indian Institute of Technology Kharagpur, India (2022) with a focus on 3D computer vision.
+Please click on my collaborations to learn more.
 
 ### Collaborations
 
 <div style="overflow-x: auto; white-space: nowrap; margin: 30px 0; padding: 10px 0;">
-  <img src="/images/gt.png" alt="GT" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block;">
-  <img src="/images/amd.png" alt="AMD" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block;">
-  <img src="/images/microsoft-research.jpeg" alt="Microsoft Research" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block;">
-  <img src="/images/microsoft.png" alt="Microsoft" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block;">
-  <img src="/images/montreal.svg" alt="Montreal" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block;">
-  <img src="/images/isical.png" alt="ISI-Cal" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block;">
-  <img src="/images/iiith.png" alt="IIIT-H" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block;">
-  <img src="/images/iitkgp.png" alt="IIT-KGP" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block;">
+  <a href="/collaborations/georgia-tech/" style="text-decoration: none;">
+    <img src="/images/gt.png" alt="Georgia Tech" title="Georgia Tech - SAIL Lab" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+  </a>
+  <a href="/collaborations/amd/" style="text-decoration: none;">
+    <img src="/images/amd.png" alt="AMD" title="AMD - AI Frameworks Internship" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+  </a>
+  <a href="/collaborations/microsoft-research/" style="text-decoration: none;">
+    <img src="/images/microsoft-research.jpeg" alt="Microsoft Research" title="Microsoft Research India" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+  </a>
+  <a href="/collaborations/microsoft/" style="text-decoration: none;">
+    <img src="/images/microsoft.png" alt="Microsoft" title="Microsoft - Data Science Internship" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+  </a>
+  <a href="/collaborations/montreal/" style="text-decoration: none;">
+    <img src="/images/montreal.svg" alt="University of Montreal" title="University of Montreal Collaboration" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+  </a>
+  <a href="/collaborations/isi-calcutta/" style="text-decoration: none;">
+    <img src="/images/isical.png" alt="ISI Calcutta" title="Indian Statistical Institute, Calcutta" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+  </a>
+  <a href="/collaborations/iiit-hyderabad/" style="text-decoration: none;">
+    <img src="/images/iiith.png" alt="IIIT Hyderabad" title="IIIT Hyderabad Collaboration" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+  </a>
+  <a href="/collaborations/iit-kharagpur/" style="text-decoration: none;">
+    <img src="/images/iitkgp.png" alt="IIT Kharagpur" title="IIT Kharagpur - Alma Mater" style="height: 60px; margin: 0 15px; vertical-align: middle; display: inline-block; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+  </a>
 </div>
 
 ## News
