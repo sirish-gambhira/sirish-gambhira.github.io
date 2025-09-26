@@ -61,7 +61,7 @@ layout: default
         </div>
 
         <!-- Content -->
-        <div class="collaboration__body">
+        <div class="collaboration__content">
           {{ content }}
         </div>
       </section>
@@ -76,24 +76,18 @@ layout: default
 </div>
 
 <style>
-.collaboration__content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .collaboration__meta {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: #f8f9fa;
   border: 1px solid #dee2e6;
-  border-radius: 8px;
-  padding: 1.2em;
-  margin-bottom: 1.5em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-radius: 6px;
+  padding: 1em;
+  margin-bottom: 1em;
 }
 
 .meta__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 0.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
 }
 
 .meta__item {
@@ -105,95 +99,23 @@ layout: default
 .meta__label {
   font-weight: 600;
   color: #495057;
-  font-size: 0.85em;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  min-width: 60px;
+  font-size: 0.9em;
+  min-width: 80px;
   flex-shrink: 0;
 }
 
 .meta__value {
   color: #212529;
-  font-weight: 500;
+  font-weight: normal;
   flex: 1;
   font-size: 0.9em;
 }
 
-.collaboration__body {
-  line-height: 1.7;
-}
-
-/* Section Card Styling - Each h3 section becomes a card */
-.collaboration__body h3 {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border: 0.25px solid #dee2e6;
-  border-radius: 8px;
-  padding: 1em 1.2em;
-  margin: 2em 0 0.5em 0;
-  font-size: 1em;
-  color: #495057;
-  font-weight: 600;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.collaboration__body h3:first-child {
-  margin-top: 0;
-}
-
-/* Content immediately following h3 gets card body styling */
-.collaboration__body h3 + p,
-.collaboration__body h3 + ul,
-.collaboration__body h3 + div,
-.collaboration__body h3 + blockquote {
-  background: #ffffff;
-  border: 1px solid #dee2e6;
-  border-top: none;
-  border-radius: 0 0 8px 8px;
-  padding: 1.2em;
-  margin: 0 0 1.5em 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-/* Handle multiple consecutive elements after h3 */
-.collaboration__body h3 ~ *:not(h3):not(h2) {
-  background: #ffffff;
-  border-left: 1px solid #dee2e6;
-  border-right: 1px solid #dee2e6;
-  padding: 0 1.2em;
-  margin: 0;
-}
-
-/* First element after h3 gets top styling */
-.collaboration__body h3 + * {
-  border-top: 1px solid #dee2e6;
-  padding-top: 1.2em;
-}
-
-/* Last element before next h3 or end gets bottom styling */
-.collaboration__body h3 ~ *:has(+ h3),
-.collaboration__body h3 ~ *:last-child {
+/* Add line after h3 headings in collaboration content */
+.collaboration__content h3 {
   border-bottom: 1px solid #dee2e6;
-  border-radius: 0 0 8px 8px;
-  padding-bottom: 1.2em;
-  margin-bottom: 1.5em;
-}
-
-.collaboration__body h2 {
-  font-size: 1.4em;
-  border-bottom: 2px solid #e9ecef;
   padding-bottom: 0.3em;
-  color: #343a40;
-  margin-top: 1.5em;
   margin-bottom: 0.8em;
-}
-
-.collaboration__body ul {
-  margin: 0.8em 0;
-  padding-left: 1.2em;
-}
-
-.collaboration__body li {
-  margin: 0.3em 0;
 }
 
 .collaboration__footer {
@@ -221,9 +143,8 @@ layout: default
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
   .collaboration__meta {
-    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    background: #2d3748;
     border-color: #4a5568;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
   
   .meta__label {
@@ -234,24 +155,7 @@ layout: default
     color: #e2e8f0;
   }
   
-  .collaboration__body h3 {
-    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
-    border-color: #4a5568;
-    color: #cbd5e0;
-  }
-  
-  .collaboration__body h3 + p,
-  .collaboration__body h3 + ul,
-  .collaboration__body h3 + div,
-  .collaboration__body h3 + blockquote,
-  .collaboration__body h3 ~ *:not(h3):not(h2) {
-    background: #1a202c;
-    border-color: #4a5568;
-    color: #e2e8f0;
-  }
-  
-  .collaboration__body h2 {
-    color: #e2e8f0;
+  .collaboration__content h3 {
     border-bottom-color: #4a5568;
   }
   
